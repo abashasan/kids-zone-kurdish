@@ -1,0 +1,124 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--accent), #fff0b3);
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 40px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255, 230, 109, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0px rgba(255,107,107,0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.hero-illustration {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  font-size: 5rem;
+}
+
+/* Animations */
+.bounce-infinite {
+  animation: bounce continuous 2s infinite ease-in-out;
+}
+.float-infinite {
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+}
+
+/* Navigation Cards */
+.nav-cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.kid-card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 40px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border: 4px solid transparent;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.kid-card h2 {
+  font-size: 2rem;
+  margin: 15px 0 10px;
+}
+
+.kid-card p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.card-icon-wrapper {
+  background-color: var(--background);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Specific Card Colors */
+.games-card { border-color: var(--primary); }
+.games-card .card-icon-wrapper { background-color: var(--primary); }
+.games-card:hover { background-color: #fff0f0; transform: translateY(-10px) scale(1.05); box-shadow: 0 15px 30px rgba(255,107,107,0.3); }
+
+.learning-card { border-color: var(--secondary); }
+.learning-card .card-icon-wrapper { background-color: var(--secondary); }
+.learning-card:hover { background-color: #f0fdfc; transform: translateY(-10px) scale(1.05); box-shadow: 0 15px 30px rgba(78,205,196,0.3); }
+
+.stories-card { border-color: #9b59b6; }
+.stories-card .card-icon-wrapper { background-color: #9b59b6; }
+.stories-card:hover { background-color: #fcf4ff; transform: translateY(-10px) scale(1.05); box-shadow: 0 15px 30px rgba(155,89,182,0.3); }
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .kid-card { padding: 30px 15px; }
+  .kid-card h2 { font-size: 1.6rem; }
+}

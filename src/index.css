@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap');
+
+:root {
+  --primary: #FF6B6B;      /* Soft Red */
+  --secondary: #4ECDC4;    /* Teal */
+  --accent: #FFE66D;       /* Yellow */
+  --success: #95E06C;      /* Light Green */
+  --background: #F4F9F9;   /* Very Light Cyan/Grey */
+  --text: #2C3E50;         /* Dark Blueish Grey */
+  --card-bg: #FFFFFF;
+  --font-main: 'Vazirmatn', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 20px; /* Large readable text */
+  line-height: 1.6;
+  direction: rtl; /* Ensure RTL at body level */
+}
+
+/* Animations that are playful */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hover-bounce:hover {
+  animation: bounce 0.5s ease;
+}
+
+/* Base Buttons */
+.btn {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-primary { background-color: var(--primary); color: white; }
+.btn-secondary { background-color: var(--secondary); color: white; }
+.btn-accent { background-color: var(--accent); color: var(--text); }

@@ -1,0 +1,39 @@
+.parents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--secondary);
+}
+
+.info-icon {
+  color: var(--secondary);
+  background: #f0fdfc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.1rem;
+}

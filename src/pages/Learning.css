@@ -1,0 +1,60 @@
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.lesson-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.lesson-card:hover {
+  border-color: #eee;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.lesson-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.lesson-card h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.lesson-card p {
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+.start-btn {
+  background: transparent;
+  border: 3px solid;
+  border-radius: 25px;
+  padding: 8px 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.start-btn:hover {
+  background-color: var(--background);
+  transform: translateY(-2px);
+}
